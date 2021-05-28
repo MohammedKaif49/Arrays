@@ -1,0 +1,36 @@
+//# Arrays
+//Write a C program to initialize a 3x3 array, insert elements into the array, read and print an array of elements and to print the sum of all diagonal elements.
+#include<stdio.h>
+void main()
+{
+	int a[3][3], i=0, j =0 , sum =0;
+	printf("Input elements in the matrix : ");
+	for(i = 0 ;i<3 ;i++)
+	{
+		for(j=0; j<3;j++)
+		{
+			printf("\nElement-[%d],[%d] = ",i , j);
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("\nThe matrix is : ");
+	for(i=0;i<3;i++)
+	{
+		for(j=0; j<3;j++)
+		{
+			printf("\n\t %d",a[i][j]);
+		}
+	}
+	printf("\nSum of diagonal elements : ");
+	for(i = 0 ;i<3 ;i++)
+	{
+		for(j=0; j<3;j++)
+		{
+			if( i == j)
+			{
+				sum+= a[i][j];
+			}
+		}
+	}
+	printf("%d", sum);
+}
